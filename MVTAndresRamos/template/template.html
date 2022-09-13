@@ -7,21 +7,13 @@
     <title>Mi Familia</title>
 </head>
 <body>
-    Nombre = {{nombremadre}} <br>
-    Edad = {{edadmadre}} <br>
-    Fecha de nacimiento = {{fechamadre}}
+    {%for persona in response%}
+    Nombre = {{persona.nombre}} <br>
+    Edad = {{persona.edad}} <br>
+    Fecha de nacimiento = {{persona.fecha}}
     <br>
     ------------------------------------------------------------------------------------------------------------
     <br>
-    Nombre = {{nombrehermano}} <br>
-    Edad = {{edadhermano}} <br>
-    Fecha de nacimiento = {{fechahermano}}
-    <br>
-    ------------------------------------------------------------------------------------------------------------
-    <br>
-    Nombre = {{nombreprimo}} <br>
-    Edad = {{edadprimo}} <br>
-    Fecha de nacimiento = {{fechaprimo}}
-    <br>
+    {%endfor%}
 </body>
 </html>
